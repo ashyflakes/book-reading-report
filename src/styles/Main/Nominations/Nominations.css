@@ -1,0 +1,89 @@
+
+.nominations__contents {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--padding-large);
+    margin-top: var(--padding-large);
+    min-height: 100dvh;
+
+    .nominations__title {
+        font-size: var(--text-large);
+        user-select: none;
+        font-weight: 600;
+    }
+    .nominations__subtitle {
+        font-size: var(--text-regular);
+        color: var(--text-light);
+    }
+}
+.nominations__filters {
+    display: flex;
+    gap: var(--text-regular);
+    align-items: center;
+    margin-top: var(--padding-regular);
+
+    #filterModalBtn {
+        &:hover {
+            background-color: var(--accent-onhover);
+        }
+        &:hover:active {
+            background-color: var(--accent-onactive);
+        }
+
+        background-color: var(--accent);
+        color: var(--text-white);
+        font-weight: 600;
+
+        .filter__icon {
+            object-fit: contain;
+            object-position: center;
+            aspect-ratio: 1 / 1;
+            display: block;
+        }
+    }
+
+    .nominations__filter {
+        &:hover {
+            color: var(--accent);
+            background-color: var(--surface-hover);
+            transform: translateY(-0.1rem);
+            box-shadow: var(--shadow-smoothest);
+        }
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        border: none;
+        cursor: pointer;
+
+        background-color: var(--surface);
+
+        transition: var(--transition-quick);
+
+        font-size: var(--text-mediumer);
+
+        padding: var(--padding-small-wide);
+
+        border-radius: var(--corner-smoothest);
+
+        @supports (corner-shape: squircle) {
+            corner-shape: squircle;
+        }
+    }
+}
+
+@media screen and (max-width: 48rem) {
+    .nominations__title-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .nominations__filters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

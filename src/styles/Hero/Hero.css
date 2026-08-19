@@ -1,0 +1,188 @@
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+.hero__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    min-height: 100dvh;
+    margin-inline: var(--padding-large);
+    padding-bottom: clamp(5rem, 10dvh + 5rem, 10rem);
+
+    @media screen and (max-width: 70.625rem) {
+        gap: max(2rem, 4vw);
+    }
+    @media screen and (max-width: 48rem) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: var(--padding-big);
+
+        padding-block: max(8rem, 10vh) 5rem;
+        min-height: auto;
+    }
+}
+.hero__image {
+    &:hover {
+        transform: scale(1.015);
+    }
+
+    display: block;
+    margin-top: var(--padding-big);
+    flex-shrink: 0;
+
+    user-select: none;
+
+    width: clamp(16.25rem, 40dvw + 5rem, 31.25rem);
+    transition: var(--transition-regular);
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(15px 15px 3px rgb(208 216 232));
+
+    @media screen and (max-width: 48rem) {
+        margin-top: 0;
+    }
+}
+.hero__probability {
+    font-size: var(--text-regular);
+    user-select: none;
+    color: var(--text-light);
+}
+.hero-title__info {
+    text-wrap: balance;
+    font-size: var(--text-bigger);
+    margin-top: var(--padding-big);
+}
+
+.hero__content {
+    flex: 1;
+
+    @media screen and (max-width: 48rem) {
+        max-width: 100%;
+
+        .hero__title {
+            text-wrap: balance;
+            font-size: clamp(1.5rem, 3.5dvw + 1.75rem, 4.5rem);
+            font-weight: 700;
+
+            animation: fadeIn forwards .6s ease;
+        }
+        .hero__probability {
+            font-size: var(--text-small);
+        }
+
+        .hero-title__buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--text-small);
+            -webkit-user-drag: none;
+        }
+    }
+
+
+
+}
+.hero-title__emphasis {
+    color: var(--accent);
+    transition: var(--transition-quick);
+
+    &:hover {
+        color: var(--accent-onhover);
+    }
+}
+.hero-title__text {
+    color: var(--text-lighter);
+}
+.hero__title {
+    font-size: var(--text-large);
+    letter-spacing: -0.1rem;
+    font-weight: 700;
+    user-select: none;
+
+}
+.hero-title__buttons {
+    display: flex;
+    align-items: center;
+    margin-top: var(--padding-bigger);
+    border-bottom: 0.2rem solid transparent;
+}
+.hero__book-CTA {
+    &:hover {
+        box-shadow: var(--shadow-smooth);
+        transform: translateY(-0.3rem);
+        background-color: var(--accent-onhover);
+        border-bottom-color: var(--accent-onactive);
+    }
+    &:hover:active {
+        background-color: var(--accent-onactive);
+    }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-regular);
+    color: var(--text-white);
+    background-color: var(--accent);
+    border-radius: var(--corner-smoothest);
+    padding: var(--padding-regular-wide);
+    font-weight: 600;
+    margin-right: var(--padding-bigger);
+    transition: var(--transition-quick);
+
+    @supports (corner-shape: squircle round round squircle) {
+        corner-shape: squircle round round squircle;
+    }
+
+    .book-CTA__text {
+        margin-right: var(--padding-small);
+    }
+    .book-CTA__icon {
+        object-fit: contain;
+        object-position: center;
+        aspect-ratio: 1 / 1;
+        display: block;
+        fill: currentColor;
+    }
+}
+.hero__nomination-CTA {
+    &:hover {
+        box-shadow: var(--shadow-smooth);
+        transform: translateY(-0.3rem);
+        color: var(--accent-onhover);
+    }
+    &:hover:active {
+        background-color: var(--surface-hover);
+    }
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--corner-smoothest);
+    background-color: var(--surface);
+    border: var(--border) 0.12rem solid;
+    padding: var(--padding-regular);
+    color: var(--text-light);
+    transition: var(--transition-quick);
+
+    @supports (corner-shape: squircle round round squircle) {
+        corner-shape: squircle round round squircle;
+    }
+
+    .nomination-CTA__text {
+        margin-right: var(--padding-small);
+    }
+    .nomination-CTA__icon {
+        object-fit: contain;
+        object-position: center;
+        aspect-ratio: 1 / 1;
+        display: block;
+        fill: currentColor;
+
+        &:hover {
+            fill: var(--accent-onhover);
+        }
+    }
+}

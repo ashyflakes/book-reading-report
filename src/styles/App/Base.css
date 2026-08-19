@@ -1,0 +1,61 @@
+
+:where(svg) {
+    fill: currentColor;
+}
+:where(address) {
+    font-style: normal;
+}
+:where(a) {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+:where(ul) {
+    list-style: none;
+}
+
+input[type='checkbox'] {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+:where(fieldset) {
+    border: none;
+    outline: none;
+}
+:where(dialog) {
+    border: none;
+    outline: none;
+}
+
+:where(img[alt]) {
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+:focus-visible {
+    outline: var(--accent) solid 2px;
+    outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: var(--corner-smoothest);
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+::selection {
+    background-color: var(--accent);
+    color: var(--text-white);
+}
+

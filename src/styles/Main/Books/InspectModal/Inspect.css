@@ -1,0 +1,38 @@
+#inspect {
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+        cursor: zoom-out;
+        user-select: none;
+    }
+    overflow: hidden;
+    cursor: zoom-out;
+    background: none;
+    border-radius: var(--corner-smooth);
+    user-select: none;
+    -webkit-user-drag: none;
+    margin: auto;
+    z-index: 10000;
+
+    .inspect__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-user-drag: none;
+        user-select: none;
+        padding: var(--padding-regular-wide);
+
+        #inspect__image {
+            object-fit: contain;
+            object-position: center;
+            aspect-ratio: 1 / 1;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-drag: none;
+
+            @media screen and (max-width: 48rem) {
+                width: 100dvw;
+            }
+        }
+    }
+}

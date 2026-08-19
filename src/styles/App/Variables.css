@@ -1,0 +1,73 @@
+:root {
+    /* цвета */
+
+    --accent: oklch(0.681 0.157 266.195);
+    --accent-onhover: oklch(0.615 0.175 270);
+    --accent-onactive: oklch(0.550 0.180 270);
+    --accent-shadow: oklch(0.470 0.150 270);
+
+    --background: oklch(1 0 0); /* задний фон */
+    --background-onactive: oklch(0.923 0.019 235.737);
+
+    --text-normal: oklch(0.15 0 0); /* текст (нормальный) */
+    --text-lighter: oklch(0.25 0 0); /* текст (светлее) */
+    --text-light: oklch(0.5 0 0); /* текст (светлый) */
+    --text-lightest: oklch(0.75 0 0); /* текст (наисветлейший) */
+    --text-white: oklch(0.995 0 0); /* текст (белый) */
+
+    /* размеры текста */
+
+    --text-little: clamp(0.5rem, 0.5dvw + 0.5rem, 0.75rem); /* текст (крохотный) */
+    --text-small: clamp(0.5rem, 0.75dvw + 0.5rem, 1rem); /* текст (маленький) */
+    --text-regular: clamp(1rem, 1dvw + 0.5rem, 1.2rem); /* текст (обычный) */
+    --text-mediumer: clamp(1rem, 1.2dvw + 0.75rem, 1.35rem); /* текст (обычный) */
+    --text-medium: clamp(1rem, 1.5dvw + 1rem, 1.5rem); /* текст (средний) */
+    --text-bigger: clamp(1rem, 1.5dvw + 1rem, 2rem);
+    --text-big-smaller: clamp(1.05rem, 2.5dvw + 1.5rem, 3.5rem);
+    --text-big: clamp(1.2rem, 3dvw + 2rem, 4rem); /* текст (большой) */
+    --text-large: clamp(1.5rem, 5dvw + 5rem, 5.5rem); /* текст (огромный) */
+
+    /* закругление углов */
+
+    --corner-sharpest: 0.1rem;
+    --corner-sharper: 0.25rem;
+    --corner-regular: 0.5rem;
+    --corner-smooth: 1rem;
+    --corner-smoothest: 3rem;
+
+    --surface: oklch(0.985 0.005 240);
+    --surface-hover: oklch(0.955 0.015 240);
+
+    --border: oklch(0.89 0.015 240);
+    --border-accent: color-mix(in oklab, var(--accent) 18%, white);
+
+    --accent-soft: color-mix(in oklab, var(--accent) 12%, white);
+    --accent-faint: color-mix(in oklab, var(--accent) 5%, white);
+
+    /* внутренние отступы */
+
+    --padding-smallest: 0.25rem;
+    --padding-smallest-wide: 0.25rem 0.5rem;
+    --padding-small: 0.5rem;
+    --padding-small-wide: 0.5rem 1rem;
+
+    --padding-regular: 1rem;
+    --padding-regular-wide: 1rem 3rem;
+
+    --padding-big: 2rem;
+    --padding-big-wide: 2rem 3rem;
+    --padding-bigger: 2.25rem;
+    --padding-bigger-wider: 2.5rem 3.5rem;
+    --padding-large: 5rem;
+
+    /* переходы */
+
+    --transition-quick: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease, border 0.2s ease, box-shadow 0.2s ease, fill 0.2s ease;
+    --transition-regular: 0.5s ease;
+    --transition-slow: 1s ease;
+
+    /* тени */
+
+    --shadow-smooth: 2px 2px 2px rgb(82 114 210 / 0.5);
+    --shadow-smoothest: 1px 1px 15px rgb(88 118 207 / 0.05);
+}
